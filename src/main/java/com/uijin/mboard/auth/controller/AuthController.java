@@ -1,6 +1,5 @@
 package com.uijin.mboard.auth.controller;
 
-import com.uijin.mboard.auth.service.AuthService;
 import com.uijin.mboard.user.service.UserService;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
