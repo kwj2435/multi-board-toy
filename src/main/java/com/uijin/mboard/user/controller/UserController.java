@@ -1,4 +1,4 @@
-package com.uijin.mboard.member;
+package com.uijin.mboard.user.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/member")
-public class MemberController {
+public class UserController {
 
   @Value("${kakao.oauth.client-id}")
   private String clientId;
