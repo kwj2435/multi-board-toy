@@ -1,13 +1,14 @@
-multi-board-project-toy
+# 디테일이 들어간 다중 게시판 프로젝트
 
-아래 내용을 학습하기 위한 토이 프로젝트
+### 아래 내용을 학습하기 위한 토이 프로젝트
 1. 로그인 토큰 관리 전략 학습
 2. Redis 사용
 3. 완성도 있는 테스트 코드 작성
 4. Rest Docs 사용
-5. Clean Code
+5. Docker Compose를 이용한 로컬 환경 구축 
+6. Clean Code
 
-요구사항
+### 요구사항
 - 카카오 로그인을 통해 전달된 회원 정보로 회원가입 진행
 - 카카오 로그인 구현
     - AccessToken, RefreshToken 발급
@@ -21,3 +22,4 @@ multi-board-project-toy
         - JMeter를 이용한 부하테스트로 성능 비교해보기
 - Controller, Service Layer에 대한 테스트 코드 작성
 - Rest Docs를 이용한 API Documentation
+- Docker, Docker-Compose를 이용한 로컬 환경 구축

@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4; /* 배경색 설정 */
+}
+
+#loginBtn {
+  display: inline-block; /* 링크 요소를 인라인 블록으로 */
+  text-align: center; /* 내부 콘텐츠 중앙 정렬 */
+}
+
+#loginBtn img {
+  max-width: 100%; /* 이미지 크기를 부모 요소에 맞게 조정 */
+  height: auto; /* 이미지 비율 유지 */
+}
