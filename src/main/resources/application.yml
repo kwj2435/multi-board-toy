@@ -1,0 +1,19 @@
+server:
+  port: 9302
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/mboard
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: create
+
+kakao:
+  oauth:
+    client-id: 13a6df1a6289fa9fab2661ecef76a50f
+    redirect-uri: http://localhost:9302/api/v1/oauth/kakao/callback
+
