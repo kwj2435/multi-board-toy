@@ -1,6 +1,6 @@
 package com.uijin.mboard.auth.controller;
 
-import com.uijin.mboard.user.service.UserService;
+import com.uijin.mboard.auth.service.AuthService;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import lombok.RequiredArgsConstructor;
@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/oauth")
 public class AuthController {
 
-  private final UserService userService;
+  private final AuthService authService;
 
   @GetMapping("/kakao/callback")
   public void kakaoCallback(
       @RequestParam("code") String code,
       HttpServletResponse response) throws IOException {
 
-    userService.kakaoLogin(code);
+    authService.kakaoLogin(code);
     response.sendRedirect("/board");
   }
 }

@@ -5,6 +5,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
@@ -12,6 +14,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 @Entity
 @Getter
@@ -20,7 +26,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "USERS")
 public class UserEntity {
-  @Id
+  @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "USER_ID")
   private Long userId;
 
@@ -35,8 +41,18 @@ public class UserEntity {
   private UserStatus status;
 
   @Column(name = "CREATED_TIME")
+  @CreationTimestamp
   private LocalDateTime createdTime;
 
   @Column(name = "UPDATED_TIME")
+  @UpdateTimestamp
   private LocalDateTime updatedTime;
+
+  public static UserEntity of(String snsId, String nickname) {
+    return UserEntity.builder()
+        .snsId(snsId)
+        .nickname(nickname)
+        .status(UserStatus.NORMAL)
+        .build();
+  }
 }

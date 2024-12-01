@@ -14,12 +14,17 @@ public class UserModel {
   @NoArgsConstructor
   @Builder
   public static class User {
+    private long userId;
+
     private String nickname;
+
     private LocalDateTime createdDate;
+
     private LocalDateTime updatedDate;
 
     public static User from(UserEntity userEntity) {
       return User.builder()
+          .userId(userEntity.getUserId())
           .nickname(userEntity.getNickname())
           .createdDate(userEntity.getCreatedTime())
           .updatedDate(userEntity.getUpdatedTime())

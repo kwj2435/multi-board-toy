@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/member")
-public class UserController {
+public class UserViewController {
 
   @Value("${kakao.oauth.client-id}")
   private String clientId;
