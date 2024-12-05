@@ -1,10 +1,10 @@
 # 디테일이 들어간 다중 게시판 프로젝트
 
 ### 아래 내용을 학습하기 위한 토이 프로젝트
-1. 로그인 토큰 관리 전략 학습
+1. 보안 취약점을 해결한 토큰 전략 적용(Sliding Session, RTR)
 2. Redis 사용
-3. 완성도 있는 테스트 코드 작성
-4. Rest Docs 사용
+3. 각 레이어별 테스트 코드 작성(Jacoco를 이용한 Test Coverage 측정)
+4. Rest Docs를 이용한 Api Documentation
 5. Docker Compose를 이용한 로컬 환경 구축 
 6. Clean Code
 
