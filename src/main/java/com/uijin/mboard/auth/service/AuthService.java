@@ -5,9 +5,7 @@ import com.uijin.mboard.auth.external.KakaoOauthClient;
 import com.uijin.mboard.auth.model.KakaoModel.KakaoMemberInfo;
 import com.uijin.mboard.auth.model.KakaoModel.KakaoOauthToken;
 import com.uijin.mboard.user.model.UserModel.User;
-import com.uijin.mboard.user.repository.UserRepository;
 import com.uijin.mboard.user.service.UserService;
-import java.util.Map;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -29,8 +27,6 @@ public class AuthService {
   private final UserService userService;
 
   public User kakaoLogin(String code) {
-    log.info("Call Method [kakaoLogin], params [{}]", code);
-
     KakaoOauthToken kakaoToken = kakaoOauthClient.getKakaoToken(
         "authorization_code",
         clientId,
